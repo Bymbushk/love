@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title> Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">*Ci medj bvl bi programmiin angi,</span><br />
+				<span class="space"/><span class="comments">*tgd 1 huurhn ym hiih sanaatai </span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				 i = <span class="keyword">new</span> B(<span class="string">"ly"</span>);<br />
+				 u = <span class="keyword">new</span> M(<span class="string">"ly"</span>);<br />
+				<span class="comments">// oct 13, 2024, anh udaa ym yrij fb giin avj bile </span><br />
+				i.(u);<br />
+				<span class="comments">// unees hoish hesg hugtsaand bol dajgu nzud bsa hh bi l hyzgariig davhaar shiidsen.</span><br />
+				u.();<br />
+				<span class="comments">// cinii yriag sonsool ymr uurhymbe ysn goy ohinbe geel XD </span><br />
+				i.miss(u);<br />
+				<span class="comments">// tgd l shunu tsug bh tusam taalgdaad l harhaar huurhn sur kordort taaruul shuud icheel yiaay</span><br />
+				i.(u);<br />
+				<span class="comments">// tgsen 1 l medhed minii amidrald ung nemeel huurhn egdute ohin orood irsn bdyy hh</span><br />
+				<span class="comments">// buur yrn ingj hunig sanj, uguilj, hairlj bgagu ymshige yhu bi yugaach mdku tag huldu hunlde.</span><br />
+				<span class="keyword">boolean</span> isForever = <span class="keyword">true</span>;<br />
+				<span class="keyword">while</span> (isForever) {<br />
+				<span class="placeholder"/>i.waitFor(u);<br />
+				<span class="placeholder"/><span class="comments">// Cii ndd uriihu hamgiin sain huvilbar bolh zamd tulhets ugjogo Marla shig mundg bolh gd l.</span><br />
+				<span class="placeholder"/><span class="comments">// Egdute huurhn uhaantai mundg ohin minee uchgdrt uuchlare aygu harmsaden shalihku ymnaas ymaani garz gj mngr ymshig baritsaal gomdlool hh "joohn harmalsi"</span><br />
+				<span class="placeholder"/>isForever = u.thinkOver();<br />
+				}<br />
+				<span class="comments">// bi cmd zunduu zunduu hartaishu zayu buuur meddg hamgiin ih too 31 es ih mdkuee zunduuu ugeer helj cdkumbnaa hh.</span><br />
+				i.ly(u);<br />
+				i.Happi(u);<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						.
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						              ❤️<br/>
+						<div class="signature">- Bymbushk</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			Inspired by <a href="http://www.openrise.com/lab/FlowerPower/">FlowerPower</a> project.<br />
+			Copyright © 2011 <a href='http://hackerzhou.me'>hackerzhou.me</a> 2009-2011
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2024, 10, 13);
+		together.setHours(20);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
